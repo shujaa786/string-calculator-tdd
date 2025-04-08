@@ -9,5 +9,7 @@ test('returns number for single number', () => {
 });
 test('returns sum for two numbers', () => {
     expect(add("1,2")).toBe(3);
-
+});
+test('returns sum for multiple numbers', () => {
+    expect(add("1,2,3,4")).toBe(10);
 });
