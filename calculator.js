@@ -9,7 +9,13 @@ function add(numbers) {
     }
   
     const values = numbers.split(delimiter).map(Number);
+    const negatives = values.filter(n => n < 0);
+  
+    if (negatives.length) {
+      throw new Error(`negative numbers not allowed ${negatives.join(",")}`);
+    }
+  
     return values.reduce((sum, num) => sum + num, 0);
-}
+  }
 
 module.exports = { add };
